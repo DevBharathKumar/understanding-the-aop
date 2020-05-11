@@ -1,4 +1,4 @@
-package org.bharath.aop.understandingtheaop;
+package org.bharath.aop.understandingtheaop.aspect;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
