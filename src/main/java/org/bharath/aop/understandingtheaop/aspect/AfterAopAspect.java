@@ -15,18 +15,18 @@ public class AfterAopAspect
 {
 	private Logger logger = LoggerFactory.getLogger(AfterAopAspect.class);
 	
-	@After("execution(* org.bharath.aop.understandingtheaop.business.*.*(..))")
+	@After("org.bharath.aop.understandingtheaop.aspect.CommonPointCutConfig.businessPointCut()")
 	public void after(JoinPoint joinPoint) {
 		logger.info("# Inside After advice - {} ",joinPoint);
 	}
 	
-	@AfterReturning(value="execution(* org.bharath.aop.understandingtheaop.business.*.*(..))",
+	@AfterReturning(value="org.bharath.aop.understandingtheaop.aspect.CommonPointCutConfig.businessPointCut()",
 			returning = "result")
 	public void afterReturn(JoinPoint joinPoint, Object result) {
 		logger.info("# Inside After returning advice - {} with return - {}",joinPoint,result);
 	}
 	
-	@AfterThrowing(value="execution(* org.bharath.aop.understandingtheaop.business.*.*(..))",
+	@AfterThrowing(value="org.bharath.aop.understandingtheaop.aspect.CommonPointCutConfig.businessPointCut()",
 			throwing = "exception")
 	public void afterException(JoinPoint joinPoint,Exception exception) {
 		logger.info("# Inside After throwing advice - {} with exception - {}",joinPoint,exception.getMessage());

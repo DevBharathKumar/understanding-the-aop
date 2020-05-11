@@ -15,7 +15,7 @@ public class ValidateUser
 	private Logger logger = LoggerFactory.getLogger(ValidateUser.class);
 	
 	
-	  @Before("execution(* org.bharath.aop.understandingtheaop.business.*.*(..))")
+	  @Before("org.bharath.aop.understandingtheaop.aspect.CommonPointCutConfig.businessPointCut()")
 	  public void before(JoinPoint joinPoint) { 
 		  logger.info("Validating the user ... "); 
 		  logger.info("The user is allowed to access the method - {}",joinPoint); 
