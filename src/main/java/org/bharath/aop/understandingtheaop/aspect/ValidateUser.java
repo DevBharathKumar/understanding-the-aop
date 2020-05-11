@@ -15,10 +15,10 @@ public class ValidateUser
 	private Logger logger = LoggerFactory.getLogger(ValidateUser.class);
 	
 	
-	  @Before("org.bharath.aop.understandingtheaop.aspect.CommonPointCutConfig.businessPointCut()")
+	  @Before("org.bharath.aop.understandingtheaop.aspect.CommonPointCutConfig.beanPointCut()")
 	  public void before(JoinPoint joinPoint) { 
 		  logger.info("Validating the user ... "); 
-		  logger.info("The user is allowed to access the method - {}",joinPoint); 
+		  logger.info("- The user is allowed to access the method - {} -",joinPoint); 
 	  }
 	 
 }
