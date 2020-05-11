@@ -13,7 +13,7 @@ public class AroundAdvice {
 
 	private Logger logger = LoggerFactory.getLogger(AroundAdvice.class);
 	
-	@Around("org.bharath.aop.understandingtheaop.aspect.CommonPointCutConfig.businessPointCut()")
+	@Around("org.bharath.aop.understandingtheaop.aspect.CommonPointCutConfig.trackTimeByUsingAnnotation()")
 	public Object aroundAdvice(ProceedingJoinPoint joinPoint) throws Throwable
 	{
 		logger.info("$ STARTING AROUND {} ",joinPoint);

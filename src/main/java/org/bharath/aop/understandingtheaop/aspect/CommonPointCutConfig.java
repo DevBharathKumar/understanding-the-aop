@@ -12,4 +12,7 @@ public class CommonPointCutConfig {
 	
 	@Pointcut("bean(*business*)")
 	public void beanPointCut() {}
+	
+	@Pointcut("@annotation(org.bharath.aop.understandingtheaop.aspect.TimeTaken)")
+	public void trackTimeByUsingAnnotation() {}
 }
