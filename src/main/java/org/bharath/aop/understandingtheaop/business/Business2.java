@@ -12,6 +12,7 @@ public class Business2
 	
 	public String someBusiness2()
 	{
+		int x = 1/0;
 		return dao2.retrieveData();
 	}
 }
